@@ -20,8 +20,8 @@ pip uninstall imgsteg
 
 ## Todo
 
-* [] Add examples
-* [] Add usage
+* [ ] Add examples
+* [ ] Add usage
 
 ## References
 
