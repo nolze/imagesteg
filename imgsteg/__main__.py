@@ -28,6 +28,25 @@ def extract_bits_builder(parser):
     parser.add_argument('--bits', dest='bits', required=True)
 
 
+def extract_bit_plane(args):
+    if args.infile is None:
+        raise Exception()
+    imgsteg = Imgsteg(args.infile)
+    channel_map = {
+        'r': imgsteg.RED,
+        'g': imgsteg.GREEN,
+        'b': imgsteg.BLUE,
+    }
+    channel, nth = (channel_map[args.bit[0]], int(args.bit[1:]))
+    new_im = imgsteg.extract_bit_plane(channel, nth)
+    new_im.save(args.outfile, quality=100)
+
+
+def extract_bit_plane_builder(parser):
+    parser.add_argument('--bit', dest='bit', required=True)
+
+
+
 def gray_bits(args):
     if args.infile is None:
         raise Exception()
@@ -58,6 +77,7 @@ modules = [
     ('inversion', inversion, blank_builder),
     ('gray_bits', gray_bits, blank_builder),
     ('extract_bits', extract_bits, extract_bits_builder),
+    ('extract_bit_plane', extract_bit_plane, extract_bit_plane_builder),
 ]
 
 for module_name, handler, builder in modules:
