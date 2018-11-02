@@ -6,17 +6,40 @@ imgsteg is a simple steganalysis tool for images.
 
 * Provides Python API, CLI, and web interface
 
+## Usage examples
+
+```bash
+$ imgsteg ui examples/problem.png # Launch web interface
+Listening on http://localhost:8080/
+Hit Ctrl-C to quit.
+```
+
+```bash
+$ imgsteg extract_bit_plane examples/problem.png output.png --bit b0
+```
+
+```bash
+$ imgsteg extract_bits examples/stg300.png --bits r0
+Congrats
+You win!
+The
+Flag
+is
+4E34B38257200616FB75CD869B8C3CF0 *** Congrats
+...
+```
+
 ## Install
 
-``
+```
 python setup.py install
-``
+```
 
 Uninstall:
 
-``
+```
 pip uninstall imgsteg
-``
+```
 
 ## Todo
 
