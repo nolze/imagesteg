@@ -1,5 +1,7 @@
 # imagesteg
 
+[![PyPI](https://img.shields.io/pypi/v/imagesteg.svg)](https://pypi.org/project/imagesteg/)
+
 `imagesteg` (formerly `imgsteg`) is a simple image steganalysis (steganography analysis) tool in Python with web-based GUI.
 A quick alternative to [StegSolve](http://www.caesum.com/handbook/stego.htm).
 
