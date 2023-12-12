@@ -1,10 +1,11 @@
 # imgsteg
 
-imgsteg is a simple steganalysis tool for images.
+imgsteg is a simple Python steganalysis (steganography analysis) tool for images with web-based GUI.
+A quick alternative to [StegSolve](http://www.caesum.com/handbook/stego.htm).
 
 ## Features
 
-* Provides Python API, CLI, and web interface
+* Provides Python API, CLI, and interactive web interface
 
 ## Usage examples
 
@@ -32,7 +33,7 @@ is
 ## Install
 
 ```
-python setup.py install
+pip install imgsteg
 ```
 
 Uninstall:
@@ -48,6 +49,6 @@ pip uninstall imgsteg
 
 ## References
 
-* Stegsolve <http://www.caesum.com/handbook/stego.htm>
+* StegSolve <http://www.caesum.com/handbook/stego.htm>
 * Stegpy <https://www.balda.ch/posts/2013/Jun/04/release-stegpy/>
 * 青い空を見上げればいつもそこに白い猫 <https://digitaltravesia.jp/usamimihurricane/webhelp/_RESOURCE/MenuItem/another/anotherAboutSteganography.html>
