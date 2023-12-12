@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "imagesteg"
-version = "0.2.0"
+version = "0.3.0"
 description = "A simple image steganalysis (steganography analysis) tool in Python"
 authors = ["nolze <nolze@int3.net>"]
 license = "MIT"
