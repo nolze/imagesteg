@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "imgsteg"
+version = "0.1.0"
+description = "A simple steganalysis (steganography analysis) tool for images"
+authors = ["nolze <nolze@int3.net>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/nolze/imgsteg"
+homepage = "https://github.com/nolze/imgsteg"
+packages = [{ include = "imgsteg" }]
+
+[tool.poetry.scripts]
+imgsteg = "imgsteg.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bitstring = "^4.1.4"
+bottle = "^0.12.25"
+pillow = "^10.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
