@@ -4,7 +4,7 @@ from bitstring import BitArray
 import random
 
 
-class Imgsteg:
+class Imagesteg:
     def __init__(self, fp):
         self.im = Image.open(fp)
         self.RED = 0

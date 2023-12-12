@@ -3,7 +3,7 @@ import sys
 
 from . import ui
 
-from .imgsteg import Imgsteg
+from .imagesteg import Imagesteg
 
 
 def blank_builder(parser):
@@ -13,14 +13,14 @@ def blank_builder(parser):
 def extract_bits(args):
     if args.infile is None:
         raise Exception()
-    imgsteg = Imgsteg(args.infile)
+    imagesteg = Imagesteg(args.infile)
     channel_map = {
-        'r': imgsteg.RED,
-        'g': imgsteg.GREEN,
-        'b': imgsteg.BLUE,
+        'r': imagesteg.RED,
+        'g': imagesteg.GREEN,
+        'b': imagesteg.BLUE,
     }
     pairs = list(map(lambda x: (channel_map[x[0]], int(x[1:])), args.bits.split(',')))
-    res = imgsteg.extract_bits(pairs)
+    res = imagesteg.extract_bits(pairs)
     sys.stdout.buffer.write(res)
 
 
@@ -31,14 +31,14 @@ def extract_bits_builder(parser):
 def extract_bit_plane(args):
     if args.infile is None:
         raise Exception()
-    imgsteg = Imgsteg(args.infile)
+    imagesteg = Imagesteg(args.infile)
     channel_map = {
-        'r': imgsteg.RED,
-        'g': imgsteg.GREEN,
-        'b': imgsteg.BLUE,
+        'r': imagesteg.RED,
+        'g': imagesteg.GREEN,
+        'b': imagesteg.BLUE,
     }
     channel, nth = (channel_map[args.bit[0]], int(args.bit[1:]))
-    new_im = imgsteg.extract_bit_plane(channel, nth)
+    new_im = imagesteg.extract_bit_plane(channel, nth)
     new_im.save(args.outfile, quality=100)
 
 
@@ -50,16 +50,16 @@ def extract_bit_plane_builder(parser):
 def gray_bits(args):
     if args.infile is None:
         raise Exception()
-    imgsteg = Imgsteg(args.infile)
-    new_im = imgsteg.gray_bits()
+    imagesteg = Imagesteg(args.infile)
+    new_im = imagesteg.gray_bits()
     new_im.save(args.outfile, quality=100)
 
 
 def inversion(args):
     if args.infile is None:
         raise Exception()
-    imgsteg = Imgsteg(args.infile)
-    new_im = imgsteg.invert()
+    imagesteg = Imagesteg(args.infile)
+    new_im = imagesteg.invert()
     new_im.save(args.outfile, quality=100)
 
 

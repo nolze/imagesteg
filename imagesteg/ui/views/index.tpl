@@ -3,7 +3,7 @@
 <head lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>imgsteg</title>
+<title>imagesteg</title>
 <link rel="stylesheet" href="/static/bootstrap.min.css">
 <style>
 html, body {
@@ -41,7 +41,7 @@ html, body {
       <select id="action" name="action" size="10">
       <option value="original">Original image</option>
       <option value="inversion">Color inversion</option>
-<!-- 
+<!--
       <option value="alpha-7">Alpha plane 7</option>
       <option value="alpha-6">Alpha plane 6</option>
       <option value="alpha-5">Alpha plane 5</option>

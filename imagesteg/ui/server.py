@@ -2,7 +2,7 @@ from bottle import request, response, route, run, static_file, template, TEMPLAT
 import os
 import io
 
-from ..imgsteg import Imgsteg
+from ..imagesteg import Imagesteg
 
 base = os.path.abspath(os.path.dirname(__file__))
 TEMPLATE_PATH.insert(0, os.path.join(base, "views/"))
@@ -21,7 +21,7 @@ def index():
 
 @route("/api/<command>", method="POST")
 def inversion(command):
-    im = Imgsteg(file)
+    im = Imagesteg(file)
 
     # print(command)
     new_im = None

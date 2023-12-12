@@ -1,6 +1,6 @@
-# imgsteg
+# imagesteg
 
-imgsteg is a simple Python steganalysis (steganography analysis) tool for images with web-based GUI.
+`imagesteg` (formerly `imgsteg`) is a simple image steganalysis (steganography analysis) tool in Python with web-based GUI.
 A quick alternative to [StegSolve](http://www.caesum.com/handbook/stego.htm).
 
 ## Features
@@ -10,17 +10,17 @@ A quick alternative to [StegSolve](http://www.caesum.com/handbook/stego.htm).
 ## Usage examples
 
 ```bash
-$ imgsteg ui examples/problem.png # Launch web interface
+$ imagesteg ui examples/problem.png # Launch web interface
 Listening on http://localhost:8080/
 Hit Ctrl-C to quit.
 ```
 
 ```bash
-$ imgsteg extract_bit_plane examples/problem.png output.png --bit b0
+$ imagesteg extract_bit_plane examples/problem.png output.png --bit b0
 ```
 
 ```bash
-$ imgsteg extract_bits examples/stg300.png --bits r0
+$ imagesteg extract_bits examples/stg300.png --bits r0
 Congrats
 You win!
 The
@@ -33,13 +33,13 @@ is
 ## Install
 
 ```
-pip install imgsteg
+pip install imagesteg
 ```
 
 Uninstall:
 
 ```
-pip uninstall imgsteg
+pip uninstall imagesteg
 ```
 
 ## Todo
